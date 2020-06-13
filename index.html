@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="LunchCheck" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="LunchCheck" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="LunchCheck" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="LunchCheck" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link href="app.js">
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app="LunchCheck">
+   <div  ng-controller="LunchCheckController" class="container">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" type="text" ng-model="menu" ng-blur="item_counter"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control">
+         </div>
+         <div class="form-group">
+             <button ng-click="item_counter()" class="btn btn-default">Check If Too Much</button>
+         </div>
+         <div id="view_msg"    class="form-group message">
+            {{msg}}
+         </div>
+   </div>
+
+
+   <script src="lib/angular/angular.js"></script>
+   <script src="lib/angular-route/angular-route.js"></script>
+   <script src="app.js"></script>
+   <script src="view1/view1.js"></script>
+   <script src="view2/view2.js"></script>
+   <script src="core/version/version.js"></script>
+   <script src="core/version/version-directive.js"></script>
+   <script src="core/version/interpolate-filter.js"></script>
+</body>
+</html>
